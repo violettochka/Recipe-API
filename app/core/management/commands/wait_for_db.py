@@ -1,6 +1,6 @@
 
 import time
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand 
 from psycopg2 import OperationalError as Psycopg20pError
 from django.db.utils import OperationalError
 
@@ -18,3 +18,4 @@ class Command(BaseCommand):
                 self.stdout.write(self.style.WARNING('Databases unvailable, wait a second'))
                 time.sleep(1)
         self.stdout.write(self.style.SUCCESS('Database is available'))
+ 
